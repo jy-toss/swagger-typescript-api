@@ -222,7 +222,6 @@ class TemplatesWorker {
       },
       {
         async: false,
-        ...(options || {}),
         includeFile: (path, configuration, options) => {
           return this.renderTemplate(
             this.getTemplateContent(path),
@@ -230,6 +229,7 @@ class TemplatesWorker {
             options,
           );
         },
+        ...(options || {}),
       },
     );
   };
